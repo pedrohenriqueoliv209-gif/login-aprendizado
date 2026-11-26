@@ -7,7 +7,6 @@ const SUPABASE_URL = "https://jehvctivofxtcwsypjgh.supabase.co";
 
 const SUPABASE_KEY = "sb_publishable_noeh4bvWsbMMkNzGcVUCZA_q4ji3Bvc";
 
-// Cria a conexão
 const banco = supabase.createClient(
     SUPABASE_URL,
     SUPABASE_KEY
@@ -19,7 +18,6 @@ const banco = supabase.createClient(
 // ========================================
 
 const formulario = document.getElementById("formLogin");
-
 const mensagem = document.getElementById("mensagem");
 
 
@@ -29,15 +27,13 @@ const mensagem = document.getElementById("mensagem");
 
 formulario.addEventListener("submit", async function(event) {
 
-    // Impede a página de atualizar
     event.preventDefault();
 
     // Captura os dados digitados
     const email = document.getElementById("email").value.trim();
-
     const senha = document.getElementById("senha").value;
 
-    // Verifica os campos
+    // Verifica se os campos estão preenchidos
     if (!email || !senha) {
         mensagem.innerText = "Preencha todos os campos!";
         return;
@@ -45,52 +41,38 @@ formulario.addEventListener("submit", async function(event) {
 
     mensagem.innerText = "Verificando seus dados...";
 
-
-    // ========================================
-    // 4. AUTENTICAÇÃO
-    // ========================================
-
     try {
 
+        // ========================================
+        // 4. AUTENTICAÇÃO NO SUPABASE
+        // ========================================
+
         const { data, error } = await banco.auth.signInWithPassword({
-
             email: email,
-
             password: senha
-
         });
 
-
-        // ========================================
-        // 5. TRATAMENTO DE ERRO
-        // ========================================
-
+        // Se houver erro, interrompe o processo
         if (error) {
-
             console.error("Erro no login:", error);
-
             mensagem.innerText = "Erro ao entrar: " + error.message;
-
             return;
         }
 
-
         // ========================================
-        // 6. LOGIN REALIZADO
+        // 5. LOGIN CONFIRMADO
         // ========================================
 
-        mensagem.innerText = "Login realizado com sucesso!";
+        mensagem.innerText = "Login realizado! Redirecionando...";
 
-        console.log("Usuário conectado:", data.user);
-
-        // Redireciona para outra página, se desejar
-        // window.location.href = "inicio.html";
-
+        // Aguarda 1 segundo e abre a página inicial
+        setTimeout(function() {
+            window.location.href = "inicio.html";
+        }, 1000);
 
     } catch (erro) {
 
         console.error("Erro inesperado:", erro);
-
         mensagem.innerText = "Erro ao conectar ao Supabase!";
 
     }

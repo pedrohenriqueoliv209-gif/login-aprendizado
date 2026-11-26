@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro - Login System</title>
+
+    <!-- Conecta o CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Criar conta</h1>
+
+        <p>Cadastre seu usuário</p>
+
+        <!-- Formulário de cadastro -->
+        <form id="formCadastro">
+
+            <!-- Campo de e-mail -->
+            <input
+                type="email"
+                id="email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+            <!-- Campo de senha -->
+            <input
+                type="password"
+                id="senha"
+                placeholder="Digite sua senha"
+                required
+            >
+
+            <!-- Botão de cadastro -->
+            <button type="submit">
+                Cadastrar
+            </button>
+
+        </form>
+
+        <!-- Mensagem de resposta -->
+        <p id="mensagem"></p>
+
+        <!-- Link para voltar ao login -->
+        <a href="index.html">Já possui conta? Entrar</a>
+
+    </div>
+
+    <!-- Biblioteca Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Código JavaScript -->
+    <script src="cadastro.js"></script>
+
+</body>
+</html>

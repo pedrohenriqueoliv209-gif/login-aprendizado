@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Nome que aparece na aba do navegador -->
+    <title>Painel de Login</title>
+
+    <!-- Conecta o arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Área principal do painel -->
+    <main class="container">
+
+        <h1>Bem-vindo!</h1>
+        <p>Entre com sua conta para continuar.</p>
+
+        <!-- Formulário de login -->
+        <form id="formLogin">
+
+            <!-- Campo de e-mail -->
+            <label for="email">E-mail</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="Digite seu e-mail"
+                required
+            >
+
+            <!-- Campo de senha -->
+            <label for="senha">Senha</label>
+            <input
+                type="password"
+                id="senha"
+                placeholder="Digite sua senha"
+                required
+            >
+
+            <!-- Botão para enviar o formulário -->
+            <button type="submit">Entrar</button>
+
+        </form>
+
+        <!-- Mensagem para quem ainda não possui cadastro -->
+        <p class="cadastro">
+            Ainda não tem uma conta?
+            <a href="cadastro.html">Criar uma conta</a>
+        </p>
+
+        <!-- Local onde serão exibidas mensagens do JavaScript -->
+        <p id="mensagem"></p>
+
+    </main>
+
+    <!-- Importa a biblioteca do Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <!-- Importa o JavaScript responsável pelo login -->
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+
+/* Seleciona TODOS os elementos da página */
+* {
+
+    /* Remove as margens padrão */
+    margin: 0;
+
+    /* Remove os espaçamentos internos padrão */
+    padding: 0;
+
+    /* Faz largura e altura incluírem padding e bordas */
+    box-sizing: border-box;
+}
+
+
+/* Estiliza o corpo inteiro da página */
+body {
+
+    /* Define a cor de fundo */
+    background: #101827;
+
+    /* Define a fonte utilizada */
+    font-family: Arial, sans-serif;
+
+    /* Ativa o Flexbox */
+    display: flex;
+
+    /* Centraliza horizontalmente */
+    justify-content: center;
+
+    /* Centraliza verticalmente */
+    align-items: center;
+
+    /* Ocupa pelo menos toda a altura da tela */
+    min-height: 100vh;
+}
+
+
+/* Estiliza o container principal */
+.container {
+
+    /* Define a cor do painel */
+    background: #1e293b;
+
+    /* Cria espaçamento interno */
+    padding: 35px;
+
+    /* Define a largura */
+    width: 340px;
+
+    /* Arredonda os cantos */
+    border-radius: 12px;
+
+    /* Centraliza os textos */
+    text-align: center;
+}
+
+
+/* Estiliza o título */
+h1 {
+
+    /* Define a cor do texto */
+    color: white;
+
+    /* Cria espaço abaixo do título */
+    margin-bottom: 10px;
+}
+
+
+/* Estiliza os parágrafos dentro do container */
+.container p {
+
+    /* Define a cor do texto */
+    color: #cbd5e1;
+
+    /* Cria espaço abaixo do parágrafo */
+    margin-bottom: 20px;
+}
+
+
+/* Estiliza os campos de entrada */
+input {
+
+    /* Ocupa toda a largura disponível */
+    width: 100%;
+
+    /* Espaçamento interno */
+    padding: 13px;
+
+    /* Espaçamento inferior */
+    margin-bottom: 15px;
+
+    /* Remove as bordas padrão */
+    border: none;
+
+    /* Arredonda os cantos */
+    border-radius: 6px;
+
+    /* Remove o contorno padrão */
+    outline: none;
+}
+
+
+/* Estiliza o botão */
+button {
+
+    /* Ocupa toda a largura disponível */
+    width: 100%;
+
+    /* Espaçamento interno */
+    padding: 13px;
+
+    /* Cor de fundo */
+    background: #2563eb;
+
+    /* Cor do texto */
+    color: white;
+
+    /* Remove a borda */
+    border: none;
+
+    /* Arredonda os cantos */
+    border-radius: 6px;
+
+    /* Transforma o cursor em uma mão */
+    cursor: pointer;
+}
+
+
+/* Aplica um efeito quando o mouse passa sobre o botão */
+button:hover {
+
+    /* Escurece a cor do botão */
+    background: #1d4ed8;
+}
+
+
+/* Estiliza a mensagem exibida pelo JavaScript */
+#mensagem {
+
+    /* Espaçamento superior */
+    margin-top: 18px;
+
+    /* Tamanho da fonte */
+    font-size: 14px;
+}
+
+/* Estilização dos links */
+a {
+    display: inline-block;
+    color: #60a5fa;
+    text-decoration: none;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Efeito ao passar o mouse */
+a:hover {
+    color: white;
+    text-decoration: underline;
+}
